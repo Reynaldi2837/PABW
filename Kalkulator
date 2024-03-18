@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kalkulator Sederhana - Penambahan, Pengurangan, Perkalian, dan Pembagian</title>
+<title>Kalkulator Sederhana - Penambahan, Pengurangan, Perkalian, Pembagian, dan Modulus</title>
 <style>
   body {
     font-family: Arial, sans-serif;
@@ -51,7 +51,7 @@
 </style>
 </head>
 <body>
-  <h1>Kalkulator Sederhana - Penambahan, Pengurangan, Perkalian, dan Pembagian</h1>
+  <h1>Kalkulator Sederhana - Penambahan, Pengurangan, Perkalian, Pembagian, dan Modulus</h1>
   <div class="input-container">
     <input type="text" id="num1" placeholder="Masukkan angka pertama">
     <select id="operator">
@@ -59,6 +59,7 @@
       <option value="kurang">-</option>
       <option value="kali">x</option>
       <option value="bagi">/</option>
+      <option value="modulus">%</option>
     </select>
     <input type="text" id="num2" placeholder="Masukkan angka kedua">
   </div>
@@ -88,6 +89,9 @@
           } else {
             result = 'Tidak dapat dibagi oleh nol';
           }
+          break;
+        case 'modulus':
+          result = num1 % num2;
           break;
         default:
           result = 'Operator tidak valid';
